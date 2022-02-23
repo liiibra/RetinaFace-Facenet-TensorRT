@@ -97,7 +97,7 @@ class FaceRecognizer(object):
 
 
 if __name__ == '__main__':
-    retinaFace_engine_path = 'retinaFace.trt'
-    facenet_engine_path = 'facenet_op10.trt'
+    retinaFace_engine_path = 'model/retinaFace.trt'
+    facenet_engine_path = 'model/facenet_op10.trt'
     faceReco = FaceRecognizer(retinaFace_engine_path, facenet_engine_path, 0, 0.6)
     faceReco.process()
