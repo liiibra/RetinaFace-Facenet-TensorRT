@@ -5,7 +5,20 @@
 整个流程可以分为两个环节，a) 存储人脸特征 b) 人脸识别
 
 a) 读取图像中的人脸信息 > 提取人脸特征 > 将提取到的人脸特征存储到csv文件内  
-b) 读取图像中的人脸信息 > 提取人脸特征 > 未知人脸与已知人脸作对比
+b) 读取图像中的人脸信息 > 提取人脸特征 > 未知人脸与已知人脸作对比  
+
+model路径下共有5个模型  
+
+a) retinaFace.onnx 用来做人脸检测
+   retinaFace.trt  由onnx版本转换得到的TensorRT模型  
+<font color="Red">注意！ 如果在不同的硬件、不同的TensorRT版本上运行，请重新使用trtexec转换 </font>  
+
+b) facenet_op.onnx
+   facenet_op10.onnx 以上2个模型都是由pytroch转换为onnx的模型，不同点是使用了不同opset版本，
+在使用onnx模型转换为TensorRT模型时，如果某个不能用，可以尝试使用另外一个  
+   facenet_op10.trt 使用facenet_op10.onnx转换而来的TensorRT模型
+ 
+<font color=red>注意！ 以上模型均已测试可以正常运行。</font>
 
 ### 2. 存储人脸特征
 
