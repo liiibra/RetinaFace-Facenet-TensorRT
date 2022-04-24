@@ -1,7 +1,10 @@
-# trtFaceReco
+# RetinaFace-Facenet-TensorRT
+
+This repo will help you do face recognition using TensorRT.
 
 
 
+在这个repo中我们使用TensorRT加速人脸识别。
 
 ### 1. 流程
 
